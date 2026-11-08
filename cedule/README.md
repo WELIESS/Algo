@@ -53,35 +53,12 @@ Les opérations se font toujours sur des blocs de 4 bits entiers, afin d'éviter
 
 Le script exécute l'AG avec les deux types de mutation, affiche la meilleure cédule trouvée et enregistre les courbes de convergence dans "convergence.png".
 
-## Paramètres
-
-Ils se trouvent en haut de `cedule.py`.
-
-| Paramètre | Valeur par défaut | Description |
-|-----------|-------------------|-------------|
-| `TAILLE_POP` | 45 | Taille de la population (environ 6 fois le nombre de variables) |
-| `N_GENERATIONS` | 100 | Nombre de générations |
-| `P_CROISEMENT` | 0.8 | Probabilité de croisement |
-| `P_MUTATION` | 0.1 | Probabilité de mutation par gène |
-| `TYPE_MUTATION` | `"inversion"` | `"inversion"` ou `"remplacement"` |
-| `ELITISME` | `True` | Conserver le meilleur individu |
-
-Il est conseillé de commencer avec des valeurs standard, puis d'essayer d'autres valeurs.
-
 ## Exemple de résultat
 
 Meilleur-Cedule.png
 
 Les résultats varient d'une exécution à l'autre, car l'AG est stochastique. Le script fixe `random.seed(42)` pour obtenir des résultats reproductibles.
 
-## Structure du projet
-
-```
-.
-├── cedule_maintenance_ga.py   # Code de l'AG
-├── convergence.png            # Courbes de convergence (généré à l'exécution)
-└── README.md
-```
 
 ## Pistes d'amélioration
 
